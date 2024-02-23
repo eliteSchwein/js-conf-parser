@@ -1,0 +1,25 @@
+{
+  "name": "js-conf-parser",
+  "version": "1.0.0",
+  "description": "conf file parser for ts/js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eliteSchwein/js-conf-parser.git"
+  },
+  "author": "eliteSCHW31N",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eliteSchwein/js-conf-parser/issues"
+  },
+  "homepage": "https://github.com/eliteSchwein/js-conf-parser#readme",
+  "devDependencies": {
+    "node-fetch": "^3.3.2",
+    "@types/node": "^20.9.0",
+    "typescript": "^5.3.3",
+    "esbuild": "^0.19.12"
+  }
+}
