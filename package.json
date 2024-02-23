@@ -4,7 +4,7 @@
   "description": "conf file parser for ts/js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "esbuild src/ConfParser.ts --tree-shaking=true --target=es2020 --bundle --minify --color=true --platform=node --outfile=dist/index.js"
   },
   "repository": {
     "type": "git",
