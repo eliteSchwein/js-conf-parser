@@ -2,9 +2,13 @@
   "name": "js-conf-parser",
   "version": "1.0.0",
   "description": "conf file parser for ts/js",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
   "scripts": {
-    "build": "esbuild src/ConfParser.ts --tree-shaking=true --target=es2020 --bundle --minify --color=true --platform=node --outfile=dist/index.js"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -17,9 +21,7 @@
   },
   "homepage": "https://github.com/eliteSchwein/js-conf-parser#readme",
   "devDependencies": {
-    "node-fetch": "^3.3.2",
     "@types/node": "^20.9.0",
-    "typescript": "^5.3.3",
-    "esbuild": "^0.19.12"
+    "typescript": "^5.3.3"
   }
 }
