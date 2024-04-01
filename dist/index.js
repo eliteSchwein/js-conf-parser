@@ -24,7 +24,7 @@ function parseConfig(path, filename) {
     for (const line of lines) {
         if (/^\[include\s(.*\.cfg)\]$/g.test(line)) {
             const subFile = line.split(' ')[1].replace(']', '');
-            const subData = this.parseConfig(path, subFile);
+            const subData = parseConfig(path, subFile);
             mergeDeep(result, subData);
             continue;
         }
