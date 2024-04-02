@@ -31,20 +31,6 @@ export default function parseConfig(path: string, filename: string) {
             continue
         }
 
-        const webcamHeader = line.match(/^\[webcam.*\]$/g)
-        if(webcamHeader) {
-            const name = webcamHeader[0].replace(/\[|\]/g, '').split(' ')
-            if(name.length < 2) {
-                name[1] = 'default'
-            }
-            if(result[name[0]] === undefined) {
-                result[name[0]] = {}
-            }
-
-            objects = {}
-            result[name[0]][name[1]] = objects
-            continue
-        }
         const header = line.match(/^\[([^\]]+)\]$/)
         if(header) {
             if(objects[tempKey] !== undefined && objects[tempKey].length === 0) {
@@ -56,6 +42,7 @@ export default function parseConfig(path: string, filename: string) {
             result[name] = objects
             continue
         }
+
         const value = line.match(/^([^;][^:]*):(.*)$/)
         if(value) {
             const key = value[1].trim()

@@ -28,19 +28,6 @@ function parseConfig(path, filename) {
             mergeDeep(result, subData);
             continue;
         }
-        const webcamHeader = line.match(/^\[webcam.*\]$/g);
-        if (webcamHeader) {
-            const name = webcamHeader[0].replace(/\[|\]/g, '').split(' ');
-            if (name.length < 2) {
-                name[1] = 'default';
-            }
-            if (result[name[0]] === undefined) {
-                result[name[0]] = {};
-            }
-            objects = {};
-            result[name[0]][name[1]] = objects;
-            continue;
-        }
         const header = line.match(/^\[([^\]]+)\]$/);
         if (header) {
             if (objects[tempKey] !== undefined && objects[tempKey].length === 0) {
