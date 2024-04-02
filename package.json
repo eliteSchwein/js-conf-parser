@@ -1,6 +1,6 @@
 {
   "name": "js-conf-parser",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "conf file parser for ts/js",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
