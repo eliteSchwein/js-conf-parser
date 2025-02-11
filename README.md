@@ -17,4 +17,4 @@ parseConfig("path/to/config", "filename.cfg")
 
 for the supported features, please check the [examples](https://github.com/eliteSchwein/js-conf-parser/tree/main/testing)
 
-this project is licensed under the GNU License
+this project is licensed under the MIT License
